@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+.placeholder {
+  background: #00acff;
+}
+  
+.toolbar .search-field {
+  width: 350px;
+}
+  
+.toolbar[width-range~="-844px"] {
+  .search-layout .search-field {
+      width: 200px;
+  }
+}
+  
+.toolbar[width-range~="950px-"] {
+  .search-layout .search-field {
+      width: 450px;
+  }
+}
+  </style> 
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+ </head> 
+ <body> 
+  <vaadin-vertical-layout style-name="main-layout" size-full="true"> 
+   <vaadin-absolute-layout style-name="toolbar" responsive="true" height="74px" _id="toolbarLayout"> 
+    <vaadin-image style-name="logo placeholder" width="45px" height="45px" _id="logo" :top="9px" :left="45px"></vaadin-image> 
+    <vaadin-css-layout style-name="search-layout v-component-group" _id="searchLayout" :top="12px" :left="233px"> 
+     <vaadin-text-field icon="fonticon://FontAwesome/f002" input-prompt="Search" style-name="inline-icon search-field" _id="searchField"></vaadin-text-field> 
+     <vaadin-button style-name="primary search-button" plain-text="" _id="searchButton">
+       Search 
+     </vaadin-button> 
+    </vaadin-css-layout> 
+    <vaadin-image style-name="user-image placeholder" width="45px" height="45px" _id="userImage" :top="9px" :right="114px"></vaadin-image> 
+    <vaadin-label style-name="username" width="75px" plain-text="" _id="username" :top="20px" :right="13px">
+      Username 
+    </vaadin-label> 
+   </vaadin-absolute-layout> 
+   <vaadin-horizontal-split-panel style-name="content-split" split-position="202px" _id="contentSplit" :expand=""> 
+    <vaadin-tree style-name="tree" item-caption-mode="id" _id="tree"></vaadin-tree> 
+    <vaadin-vertical-layout style-name="content-layout" margin="true" _id="contentLayout"> 
+     <vaadin-label style-name="huge placeholder" size-auto="true" plain-text="" :middle="" :center="">
+       &lt;your content here&gt; 
+     </vaadin-label> 
+    </vaadin-vertical-layout> 
+   </vaadin-horizontal-split-panel> 
+  </vaadin-vertical-layout>  
+ </body>
+</html>
